@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brycko - Writing Portfolio</title>
+  </head>
+  <body>
+      <section id = "header">
+          <div class = "logo">
+              <div id = "logo-image"></div>
+              <div id = "author">
+                   Brycko<br>
+                   Creative Writing
+                   </div>
+          </div>
+          <div class = "nav-actions">
+              <ul>
+                  <!--
+                  <li>About</li>
+                  <li>Hire Me</li>-->
+                  <li><a href = "https://ch.linkedin.com/in/bryce-wagner-aa48b914a">Contact me on LinkedIn</a></li>
+              </ul>
+          </div>
+      </section>
+      <div class = "content-wrapper">
+          
+      <section id = "splash">
+          <div id = "display-case">
+              <h1 class = "splash-title">READ_</h1>
+              <h2 class = "splash-description">
+                  we live in a global world
+                  <br>
+                  borders are blurring
+                  <br>
+                  we’re part of our devices
+              </h2>
+            </div>
+      </section>
+          <div id = "works-nav">
+              <ul><h3>
+                  <li class = "work" onclick="show('letter')">A letter to Greta Thunberg</li>
+                  <li class = "work" onclick="show('post-truth')">A Post-Truth Funeral</li>
+                  <li class = "work best selected" id = "bliss" onclick="show('bliss')">Bliss</li>
+                  <li class = "work" id = "catching-sun">Catching Sun</li>
+                  <li class = "work"  onclick="show('dream-jumper')">DreamJumper</li>
+                  <li class = "work"  onclick="show('exodus')">Exodus</li>
+                  <li class = "work" onclick="show('uncreator')">The Uncreator</li>
+                  <li class = "work"  onclick="show('market-delusions')">Market Delusions</li>
+                  <li class = "work" onclick="show('nervous-laugh')">Poem//Nervous Laugh</li>
+                  </h3>
+              </ul></h3>
+          </div>
+      </section>
+      <section id = "writing">
+          <div id = "dream-jumper-text" class = "work-body">
+              <p><i>Hmmm. </i></p>
+<p>Daniel woke up to his dream, as usual.</p>
+<p>
+He’d gotten lucky this time; The smoldering coals of an isolated campfire, heavy dew from the blades of grass that brushed up to his bivy sack, and best of all, the crashing and compressions of the waves against the unwavering cliffs. The air was damp and cold, and perforated with particles of mist that were brushing, bending and blowing with the pressure changes invoked by the lapsing waves, in and away, pushed up and pulled back down in harmony with the tireless water.</p>
+          </div>
+          <div id = "letter-text" class = "work-body">
+              <p>Dear Greta,
+              </p><p>
+I need your help. But first, I need to tell you something. You can skip to my point (marked with an arrow,  ), but I implore you to listen to my story and what I have to say. I believe it could be greatly beneficial, maybe even vital, in the collective fight against Climate Change.</p> 
+              <p>
+First things first; My name is Bryce Wagner (a.k.a Ben Brycko). I’m a 20-year-old American-Swiss student currently studying at the University of Washington in Seattle, Washington, USA. The sad truth is that I’m only a mild activist (I showed up and gave a speech for the March For Our Lives in Geneva, Switzerland in 2018, but that’s about it) and that I’m hardly the greatest example when it comes to advocating for action against Climate Change (so far I’ve missed all of the Climate Strikes, not by choice but by circumstance). But I did grow up exposed to nature more than the average kid, hiking, skiing, camping in the mountains and valleys of my beautiful home country of Switzerland. I grew up between worlds, at the globally conscious International School of Geneva and the expat community surrounding the UN headquarters in Geneva, and as a lifelong Scout in the Boy Scouts of America Transatlantic Council, so I’m sensitive and aware of global politics too. 
+              </p> 
+          </div>
+          <div id = "post-truth-text" class = "work-body">
+              <p>Text TBA</p>
+          </div>
+          <div id = "exodus-text" class = "work-body">
+              <p>Text TBA</p>
+          </div>
+          <div id = "market-delusions-text" class = "work-body">
+              <p>Text TBA</p>
+          </div>
+          <div id = "nervous-laugh-text" class = "work-body">
+              <p>Text TBA</p>
+          </div>
+          <div id = "uncreator-text" class = "work-body">
+              <p>Text TBA</p>
+          </div>
+    </section>
+      </div>
+      <section id = "footer"></section>
+  </body>
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,500&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+
+    html, body{
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+       font-size: 120px; 
+        font-weight:100;
+        margin: 0px;
+    }
+    h2{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    h3{
+        font-size: 30px;
+        font-weight: 100;
+        color: #00000055;
+    }
+    .selected{
+        color: black;
+        background: aquamarine;
+    }
+    p{
+        font-size: 18px;
+        font-family: 'Merriweather', serif;
+        line-height: 30px;
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px;
+    }
+    li{
+        padding: 6px 9px;
+        display: inline-block;
+    }
+    a{
+        color:black;
+        text-decoration: none;
+    }
+    a:hover{
+        cursor:pointer;
+        background: aquamarine;
+    }
+    .content-wrapper{
+        margin: 0 auto;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        max-width: 900px;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    #header{
+        height: 42px;
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #logo-image{
+        width: 36px;
+        height: 36px;
+        border-radius: 36px;
+        align-self: flex-start;
+        margin-left: 12px;
+        margin-right: 12px;
+        background: black;
+    }
+    #author{
+        align-self: flex-start;
+        margin-right: auto;
+        height: 42px;
+        width: auto;
+    }
+    .nav-actions{
+        align-items: baseline;
+        justify-content: space-around;
+    }
+    #display-case{
+        background: #5BFFBB;
+        margin-top: 10vh;
+        display: flex;
+        justify-content: space-between;
+        min-height: 300px;
+    }
+    .splash-title{
+        margin-left: -5vw;
+    }
+    .splash-description{
+        margin-left: 5vw;
+        align-self: flex-end;
+        margin-right: 5vw;
+    }
+    #works-nav{
+        background: none;
+        margin-top:12px;
+    }
+    .work:hover{
+        background: aquamarine;
+        cursor: pointer;
+    }
+    #writing{
+        align-self: center;
+        max-width: 600px;
+    }
+    #footer{
+        background: #eee;
+    }
+</style>
+<script>
+    function show(thiswork){
+        console.log("Trying to show ", thiswork);
+        var texts = document.getElementsByClassName("work-body");
+        console.log("texts", texts);
+        for (var i = 0; i < texts.length; i++){
+            console.log(i);
+            texts[i].style.display = "none";
+        }
+        document.getElementById(thiswork + "-text").style.display = "block";
+    }
+</script>
