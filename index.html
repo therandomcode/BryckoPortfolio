@@ -39,15 +39,15 @@
       </section>
           <div id = "works-nav">
               <ul><h3>
-                  <li class = "work" onclick="show('letter')">A letter to Greta Thunberg</li>
-                  <li class = "work" onclick="show('post-truth')">A Post-Truth Funeral</li>
+                  <li class = "work" id = "letter" onclick="show('letter')">A letter to Greta Thunberg</li>
+                  <li class = "work" id = "post-truth" onclick="show('post-truth')">A Post-Truth Funeral</li>
                   <li class = "work best selected" id = "bliss" onclick="show('bliss')">Bliss</li>
                   <li class = "work" id = "catching-sun">Catching Sun</li>
-                  <li class = "work"  onclick="show('dream-jumper')">DreamJumper</li>
-                  <li class = "work"  onclick="show('exodus')">Exodus</li>
-                  <li class = "work" onclick="show('uncreator')">The Uncreator</li>
-                  <li class = "work"  onclick="show('market-delusions')">Market Delusions</li>
-                  <li class = "work" onclick="show('nervous-laugh')">Poem//Nervous Laugh</li>
+                  <li class = "work"  id = "dream-jumper" onclick="show('dream-jumper')">DreamJumper</li>
+                  <li class = "work" id = "exodus" onclick="show('exodus')">Exodus</li>
+                  <li class = "work" id = "uncreator" onclick="show('uncreator')">The Uncreator</li>
+                  <li class = "work" id = "market-delusions" onclick="show('market-delusions')">Market Delusions</li>
+                  <li class = "work" id = "nervous-laugh" onclick="show('nervous-laugh')">Poem//Nervous Laugh</li>
                   </h3>
               </ul></h3>
           </div>
@@ -215,13 +215,17 @@ First things first; My name is Bryce Wagner (a.k.a Ben Brycko). I’m a 20-year-
 </style>
 <script>
     function show(thiswork){
-        console.log("Trying to show ", thiswork);
         var texts = document.getElementsByClassName("work-body");
-        console.log("texts", texts);
+        var textnavs = document.getElementsByClassName("selected");
+        for (var k = 0; k < textnavs.length; k++){
+            console.log(textnavs[k].classList);
+            textnavs[k].classList.remove("selected");
+        }
         for (var i = 0; i < texts.length; i++){
-            console.log(i);
             texts[i].style.display = "none";
         }
         document.getElementById(thiswork + "-text").style.display = "block";
+        document.getElementById(thiswork).classList.add("selected");
+        
     }
 </script>
